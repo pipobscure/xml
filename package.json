@@ -1,0 +1,39 @@
+{
+	"name": "@pipobscure/xml",
+	"version": "0.1.0",
+	"description": "A fully capable, forgiving XML parser for CalDAV/CardDAV and general use",
+	"license": "EUPL-1.2",
+	"author": "Philipp Dunkel <pip@pipobscure.com>",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist",
+		"LICENSE",
+		"README.md"
+	],
+	"scripts": {
+		"build": "tsc",
+		"build:watch": "tsc --watch",
+		"typecheck": "tsc -p tsconfig.test.json",
+		"test": "tsc -p tsconfig.test-build.json && node --test .dist-test/test/*.test.js",
+		"test:src": "node --experimental-strip-types --test test/*.test.ts",
+		"format": "biome format --write",
+		"lint": "biome lint --write"
+	},
+	"devDependencies": {
+		"@pipobscure/biome": "^1.1.2",
+		"@types/node": "^25.3.0",
+		"typescript": "^5.9.3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/pipobscure/xml"
+	}
+}

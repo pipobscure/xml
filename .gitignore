@@ -1,0 +1,24 @@
+# Build output
+dist/
+.dist-test/
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# npm pack artefact
+*.tgz
+
+# TypeScript incremental build cache
+*.tsbuildinfo
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/settings.json
+
+# Claude Code session data (not useful outside local dev)
+.claude/
